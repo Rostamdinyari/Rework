@@ -1,10 +1,9 @@
-from pymongo import MongoClient
+from server import run_server
 
-# Establish a connection to the MongoDB server
-client = MongoClient("mongodb+srv://rdinyarish:<password>@cluster0.jqbyfjn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-# Access the database
-db = client["Rework"]
+def main():
+    # Perform main program logic here
+    print("Starting the server...")
+    run_server()
 
-# Access the collection within the database
-collection = db["mainPage"]
-print()
+if __name__ == '__main__':
+    main()
