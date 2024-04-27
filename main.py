@@ -7,3 +7,4 @@ db = client["Rework"]
 
 # Access the collection within the database
 collection = db["mainPage"]
+print()
