@@ -8,7 +8,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write(b"Hello, World!")  # Example response
+        self.wfile.write(b"Hello0000000, World!")  # Example response
 
 def run_server():
     # Define the IP address and port number for your server
