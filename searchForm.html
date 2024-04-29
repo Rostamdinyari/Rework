@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Form</title>
+    <title>Search Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,27 +37,13 @@
 
         input[type="text"],
         input[type="date"],
-        select,
-        textarea {
+        select {
             width: 100%;
             padding: 8px;
             margin: 6px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-        }
-
-        .search-button {
-            background-color: #7362d4;
-            border: none;
-            color: #fff;
-            padding: 8px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .search-button:hover {
-            background-color: #aaa;
         }
 
         input[type="submit"] {
@@ -98,27 +84,26 @@
 <body>
     <div class="container">
         <img src="logo.jpg" alt="Logo" class="logo">
-        <h1>Form</h1>
-        <form method="POST" action="/Home">
+        <h1>Search Form</h1>
+        <form method="GET" action="/search-results">
             <label for="sn">Serial Number:</label>
-            <input type="text" name="sn" id="sn" required>
-            <br><br>
+            <input type="text" name="sn" id="sn" placeholder="Enter Serial Number" required>
 
-            <label for="date">Date:</label>
-            <input type="date" name="date" id="date" required><br><br>
+            <label for="from-date">From:</label>
+            <input type="date" name="from-date" id="from-date" required>
 
-            <label for="remarks">Remarks:</label>
-            <textarea name="remarks" id="remarks" required></textarea><br><br>
+            <label for="to-date">To:</label>
+            <input type="date" name="to-date" id="to-date" required>
 
-            <label for="dropdown">Grade:</label>
-            <select name="Grade" id="Grade">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-            </select><br><br>
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="">-- Select Category --</option>
+                <option value="A">Category A</option>
+                <option value="B">Category B</option>
+                <option value="C">Category C</option>
+            </select>
 
-            <input type="submit" value="Submit">
-            <button type="button" class="search-button" onclick="window.location.href='searchForm.html'">Search</button>
+            <input type="submit" value="Search">
         </form>
     </div>
 </body>

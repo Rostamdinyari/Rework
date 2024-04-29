@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="tabs">
+                <li><a href="Home.html" class="tab-link">Home</a></li>
+                <li class="active"><a href="login.html" class="tab-link">Log in</a></li>
+                <li><a href="register.html" class="tab-link">Register</a></li>
+            </ul>
+        </nav>
+
+        <h1>Login</h1>
+        {% if error %}
+        <p class="error-msg">Invalid username or password.</p>
+        {% endif %}
+        <form method="POST" action="/login" class="login-container">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<header>
+    <nav>
+        <ul class="tabs">
+            <li><a href="Home.html" class="tab-link">Home</a></li>
+            <li><a href="login.html" class="tab-link">Log in</a></li>
+            <li class="active"><a href="register.html" class="tab-link">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="form-container">
+        <h1>Register</h1>
+        <form method="POST" action="/register">
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstname" id="firstname" required>
+            <br><br>
+            <label for="lasttname">Lastname:</label>
+            <input type="text" name="lasttname" id="lasttname" required>
+            <br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br><br>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" required>
+            <br><br>
+            <input type="submit" value="Register" class="submit-btn">
+        </form>
+    </div>
+</body>
+
+</html>
