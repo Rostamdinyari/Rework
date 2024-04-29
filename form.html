@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    {% if submitted %}
+    <p>Form submitted successfully!</p>
+    {% endif %}
+    <form method="POST" action="/Home">
+        <label for="sn">Serial Number:</label>
+        <input type="text" name="sn" id="sn" required><br><br>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required><br><br>
+        <label for="remarks">Remarks:</label>
+        <textarea name="remarks" id="remarks" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
